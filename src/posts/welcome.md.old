@@ -1,0 +1,58 @@
+---
+title: Welcome to Duckquill for Svelte
+date: "2025-01-07"
+description: An introduction to this SvelteKit-based blog theme inspired by Duckquill
+tags:
+  - svelte
+  - blog
+  - getting-started
+---
+
+Welcome to your new blog! This theme is a SvelteKit implementation inspired by the beautiful [Duckquill](https://duckquill.daudix.one) theme for Zola.
+
+## Features
+
+This blog comes with everything you need to start writing:
+
+- **Markdown support** with frontmatter for metadata
+- **Syntax highlighting** for code blocks
+- **Light/dark mode** with system preference detection
+- **Responsive design** that looks great on any device
+- **Fast** static site generation
+
+## Writing Posts
+
+Creating a new post is simple. Just add a `.md` file to the `src/posts` directory with the following frontmatter:
+
+```markdown
+---
+title: Your Post Title
+date: "2025-01-07"
+description: A brief description
+tags:
+  - tag1
+  - tag2
+---
+
+Your content here...
+```
+
+## Code Highlighting
+
+Code blocks are automatically highlighted:
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet('World');
+```
+
+## What's Next?
+
+1. Customize the site config in `src/lib/config.ts`
+2. Update the about page
+3. Start writing your first real post!
+
+Happy blogging! 🦆

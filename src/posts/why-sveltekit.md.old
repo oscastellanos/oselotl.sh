@@ -1,0 +1,76 @@
+---
+title: Why SvelteKit for a Blog?
+date: "2025-01-05"
+description: Exploring the benefits of using SvelteKit for building a personal blog
+tags:
+  - svelte
+  - web-development
+  - opinion
+---
+
+When I set out to recreate the Duckquill aesthetic, I had several options: stick with Zola, use a popular framework like Next.js or Astro, or try something different. I chose SvelteKit, and here's why.
+
+## Simplicity
+
+Svelte's philosophy aligns perfectly with building a blog. There's no virtual DOM, no complex state management to learn—just write components that compile to efficient JavaScript.
+
+```svelte
+<script>
+  let count = 0;
+</script>
+
+<button on:click={() => count++}>
+  Clicked {count} times
+</button>
+```
+
+That's it. No imports, no hooks, no ceremony.
+
+## Performance
+
+SvelteKit's static adapter generates pure HTML, CSS, and minimal JavaScript. The result is a blog that:
+
+- Loads instantly
+- Works without JavaScript (mostly)
+- Scores 100 on Lighthouse
+
+## Developer Experience
+
+The tooling is excellent:
+
+- Hot module replacement works flawlessly
+- TypeScript support is first-class
+- File-based routing is intuitive
+- MDsveX handles Markdown beautifully
+
+## Flexibility
+
+Unlike static site generators that lock you into templates, SvelteKit gives you full control. Need an interactive component in a blog post? Just import it:
+
+```markdown
+---
+title: My Interactive Post
+---
+
+<script>
+  import MyChart from '$lib/components/MyChart.svelte';
+</script>
+
+Check out this chart:
+
+<MyChart data={[1, 2, 3, 4, 5]} />
+```
+
+## The Verdict
+
+For a simple blog, Zola or Hugo might be faster to set up. But if you want:
+
+- Full control over your site's behavior
+- The ability to add interactive elements
+- A foundation that can grow with your needs
+
+...SvelteKit is an excellent choice.
+
+---
+
+*What's your favorite framework for building blogs? I'd love to hear your thoughts.*

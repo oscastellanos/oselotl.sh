@@ -1,0 +1,70 @@
+---
+title: Customizing Your Theme
+date: "2025-01-06"
+description: Learn how to customize colors, fonts, and more in your Duckquill-Svelte blog
+tags:
+  - customization
+  - css
+  - tutorial
+---
+
+One of the best things about this theme is how easy it is to customize. Let's walk through the main ways you can make it your own.
+
+## Changing the Primary Color
+
+The entire color scheme is built around CSS custom properties. Open `src/lib/styles/global.css` and find these variables:
+
+```css
+:root {
+  --primary-hue: 260;
+  --primary-saturation: 60%;
+}
+```
+
+Change the `--primary-hue` value (0-360) to shift the entire color palette:
+
+| Hue | Color |
+|-----|-------|
+| 0   | Red   |
+| 60  | Yellow |
+| 120 | Green |
+| 180 | Cyan  |
+| 240 | Blue  |
+| 300 | Magenta |
+
+## Typography
+
+The theme uses Inter for body text and JetBrains Mono for code. You can swap these out by modifying the font imports in `src/app.html` and updating the CSS variables:
+
+```css
+:root {
+  --font-sans: 'Your Font', sans-serif;
+  --font-mono: 'Your Mono Font', monospace;
+}
+```
+
+## Site Configuration
+
+Edit `src/lib/config.ts` to update:
+
+- Site title and description
+- Author name
+- Social links
+- Navigation menu items
+
+> **Tip:** The social links in the footer automatically show/hide based on whether you've provided URLs for each platform.
+
+## Adding Your Own Styles
+
+Want to add custom styles? You can either:
+
+1. Modify `src/lib/styles/global.css` directly
+2. Create a new CSS file and import it in your layout
+
+## Dark Mode
+
+The theme automatically supports system preference for dark mode, but users can also toggle it manually. The preference is saved to localStorage.
+
+---
+
+That's the basics! Have fun customizing your new blog.
